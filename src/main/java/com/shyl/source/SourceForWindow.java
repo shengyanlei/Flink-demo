@@ -1,6 +1,5 @@
 package com.shyl.source;
 
-import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.api.java.tuple.Tuple4;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.slf4j.Logger;
@@ -41,8 +40,9 @@ public class SourceForWindow implements SourceFunction<Tuple4<String, Integer, S
         int count = 0;
         while (isRunning) {
             String word = WORDS[count % WORDS.length];
-            String time = getHHmmss(System.currentTimeMillis());
-            Tuple4<String, Integer, String,Long> tuple2 = Tuple4.of(word, count, time,System.currentTimeMillis());
+            Long timestamp = System.currentTimeMillis();
+            String time = getHHmmss(timestamp);
+            Tuple4<String, Integer, String,Long> tuple2 = Tuple4.of(word, count, time,timestamp);
             ctx.collect(tuple2);
             System.out.println("send data :" + tuple2);
             Thread.sleep(sleepTime);
@@ -56,7 +56,7 @@ public class SourceForWindow implements SourceFunction<Tuple4<String, Integer, S
     }
 
     public static String getHHmmss(Long time) {
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss.SSS");
         String str = sdf.format(new Date(time));
         return "时间:" + str;
     }
