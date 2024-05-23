@@ -13,26 +13,24 @@ public class SourceForWindow implements SourceFunction<Tuple4<String, Integer, S
     private volatile boolean isRunning = true;
     // 发送元素间隔时间
     private long sleepTime;
+//    发送完一组是否休息10秒
+    private boolean stopSession=false;
 
     public static final String[] WORDS = new String[]{
-            "shyl",
-            "shyl",
-            "shyl",
-            "shyl",
-            "shyl",
+            "java",
+            "java",
             "java",
             "flink",
             "flink",
             "flink",
-            "shyl",
-            "shyl",
             "hadoop",
             "hadoop",
-            "spark"
+            "hadoop",
     };
 
-    public SourceForWindow(long sleepTime) {
+    public SourceForWindow(long sleepTime,boolean stopSession) {
         this.sleepTime = sleepTime;
+        this.stopSession = stopSession;
     }
 
     @Override
@@ -45,7 +43,11 @@ public class SourceForWindow implements SourceFunction<Tuple4<String, Integer, S
             Tuple4<String, Integer, String,Long> tuple2 = Tuple4.of(word, count, time,timestamp);
             ctx.collect(tuple2);
             System.out.println("send data :" + tuple2);
-            Thread.sleep(sleepTime);
+            if (stopSession && count==WORDS.length){
+                Thread.sleep(10000);
+            }else {
+                Thread.sleep(sleepTime);
+            }
             count++;
         }
     }
