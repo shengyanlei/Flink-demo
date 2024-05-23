@@ -14,9 +14,9 @@ import java.time.Duration;
 public class TumblingWindow {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        env.setParallelism(4);
+        env.setParallelism(2);
 
-        DataStreamSource<Tuple4<String, Integer, String,Long>> tupelSource = env.addSource(new SourceForWindow(1000));
+        DataStreamSource<Tuple4<String, Integer, String,Long>> tupelSource = env.addSource(new SourceForWindow(1000,false));
 
         //配置水印生成器
         WatermarkStrategy<Tuple4<String,Integer,String,Long>> watermarkStrategy = WatermarkStrategy

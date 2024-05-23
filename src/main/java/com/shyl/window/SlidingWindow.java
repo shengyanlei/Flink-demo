@@ -15,8 +15,8 @@ import java.time.Duration;
 public class SlidingWindow {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        env.setParallelism(4);
-        DataStreamSource<Tuple4<String, Integer, String, Long>> tuple4Source = env.addSource(new SourceForWindow(1000));
+        env.setParallelism(2);
+        DataStreamSource<Tuple4<String, Integer, String, Long>> tuple4Source = env.addSource(new SourceForWindow(1000,false));
 
         WatermarkStrategy<Tuple4<String, Integer, String, Long>> watermarkStrategy = WatermarkStrategy.<Tuple4<String, Integer, String, Long>>forBoundedOutOfOrderness(Duration.ofSeconds(3))
                 .withTimestampAssigner((event, timestamp) -> event.f3);
