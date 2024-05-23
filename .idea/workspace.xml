@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d6941a-cc07-4b64-8a70-240ac03396f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shyl/source/SourceForWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shyl/window/TumblingWindow.java" afterDir="false" />
+    <list default="true" id="63d6941a-cc07-4b64-8a70-240ac03396f6" name="Changes" comment="新建readme文件">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shyl/window/SlidingWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shyl/source/SourceForWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shyl/source/SourceForWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shyl/window/TumblingWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shyl/window/TumblingWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -58,7 +58,33 @@
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SlidingWindow">
+    <configuration name="SlidingWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shyl.window.SlidingWindow" />
+      <module name="Flink-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shyl.window.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shyl.source.TimeSource" />
+      <module name="Flink-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shyl.source.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TumblingWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shyl.window.TumblingWindow" />
       <module name="Flink-demo" />
@@ -74,7 +100,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SlidingWindow" />
         <item itemvalue="Application.TumblingWindow" />
+        <item itemvalue="Application.TimeSource" />
       </list>
     </recent_temporary>
   </component>
@@ -87,10 +115,57 @@
       <option name="presentableId" value="Default" />
       <updated>1716443716192</updated>
     </task>
+    <task id="LOCAL-00001" summary="创建一个无界带时间戳的数据集">
+      <option name="closed" value="true" />
+      <created>1716449969740</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716449969740</updated>
+    </task>
+    <task id="LOCAL-00002" summary="滑动窗口示例代码">
+      <option name="closed" value="true" />
+      <created>1716449987035</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716449987036</updated>
+    </task>
+    <task id="LOCAL-00003" summary="pom文件">
+      <option name="closed" value="true" />
+      <created>1716450234395</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716450234395</updated>
+    </task>
+    <task id="LOCAL-00004" summary="不知道啥玩意">
+      <option name="closed" value="true" />
+      <created>1716450250640</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716450250640</updated>
+    </task>
+    <task id="LOCAL-00005" summary="新建readme文件">
+      <option name="closed" value="true" />
+      <created>1716450472708</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716450472708</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="创建一个无界带时间戳的数据集" />
+    <MESSAGE value="滑动窗口示例代码" />
+    <MESSAGE value="pom文件" />
+    <MESSAGE value="不知道啥玩意" />
+    <MESSAGE value="新建readme文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="新建readme文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
